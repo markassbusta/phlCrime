@@ -1,10 +1,3 @@
-// add ESRI geocoder widget
-
-	
-
-
-// Add tile Layers
-
 
 var Stamen_Toner = L.tileLayer('http://stamen-tiles-{s}.a.ssl.fastly.net/toner/{z}/{x}/{y}.png', {
   attribution: 'Map tiles by <a href="http://stamen.com">Stamen Design</a>, <a href="http://creativecommons.org/licenses/by/3.0">CC BY 3.0</a> &mdash; Map data &copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>',
@@ -46,6 +39,8 @@ $.getJSON(ParksPolyURL, function(data) {
     }).addTo(map)
 });
 
+
+
 //style ParksPoly
 
 // Add Esri Geocoder Widget
@@ -64,14 +59,19 @@ var searchControl = new L.esri.Controls.Geosearch().addTo(map);
 
     var parkCrimes2009URL = "/static/data/parks2009.geojson"
 
-    $.getJSON(parkCrimes2009URL, function(data) {
-    L.geoJson(data, {
-        onEachFeature: function(feature, layer) {
-            layer.bindPopup(feature.properties.TEXT_GENER + '<br/>' + feature.properties.LOCATION_B)
-        }
-    }).addTo(map)
-});
-
+    $.getJSON(parkCrimes2009URL,function(data){
+         var crimeIcon = L.icon({
+    iconUrl: '/static/lib/images/burglar.png',
+    iconSize: [30,40]
+  });
+    var crimes = L.geoJson(data,{
+      pointToLayer: function(feature,latlng){
+        var marker = L.marker(latlng,{icon: crimeIcon});
+        marker.bindPopup(feature.properties.ROAD + '<br/>' + feature.properties.OPEN_DT);
+        return marker;
+      }
+    });
+    
 
 
 
