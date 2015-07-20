@@ -19,12 +19,26 @@ L.tileLayer('http://api.tiles.mapbox.com/v4/{id}/{z}/{x}/{y}.png?access_token={a
 }).addTo(map);
 
 // Neighborhoods geojson URL
-var neighborhoodsURL = "/static/data/neighborhoods.geojson"
+ var overlay_neighborStyle = L.tileLayer.wms('http://ec2-52-25-236-134.us-west-2.compute.amazonaws.com/geoserver/neighborhoods/wms?version=1.1.0&layers=neighborhoods:Neighborhoods_Philadelphia&styles=&bbox=2660586.2010556012,204650.5548618585,2750109.               0049492796,304965.3233920191&width=685&height=768&srs=EPSG:2272&', {
+              layers: 'Neighborhoods_Philadelphia',
+              format: 'image/png',
+              	transparent: true,
+               continuousWorld : true,
+           }).addTo(map);
 
-$.getJSON(neighborhoodsURL, function(data) {
-    L.geoJson(data, {
-        onEachFeature: function(feature, layer) {
-            layer.bindPopup(feature.properties.listname)
-        }
-    }).addTo(map)
-});
+L.control.weather({
+  lang: "es",
+  units: "metric"
+}).addTo(map);  
+
+
+  L.controlCredits({
+             image: "static/lib/images/geoServer.png",
+             link: "http://www.geoserver.org/",
+             text: "Overlay created with geoserver<br/>by GreenInfo Network"
+         }).addTo(map);
+
+  L.control.locate().addTo(map);	
+
+
+  map.addControl( new L.Control.Compass() );

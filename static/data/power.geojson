@@ -1,0 +1,13 @@
+{
+"type": "FeatureCollection",
+"crs": { "type": "name", "properties": { "name": "urn:ogc:def:crs:OGC:1.3:CRS84" } },
+                                                                                
+"features": [
+{ "type": "Feature", "properties": { "OBJECTID": 1, "NEIGHBOR": "Gate B6", "FULLNAME": "Power Station", "SPACE": null, "TYPE": "Power Station", "ART_ID": null, "TERMINAL": "B", "GlobalID": "2b0fd271-d119-422f-aaae-1000a57aa1fd" }, "geometry": { "type": "Point", "coordinates": [ -75.243784803810485, 39.874935419661412 ] } },
+{ "type": "Feature", "properties": { "OBJECTID": 2, "NEIGHBOR": "Harley Davidson", "FULLNAME": "Power Station", "SPACE": null, "TYPE": "Power Station", "ART_ID": null, "TERMINAL": "B", "GlobalID": "4779f951-2c80-46ab-b046-de61aa29861e" }, "geometry": { "type": "Point", "coordinates": [ -75.243325941581432, 39.875873339575755 ] } },
+{ "type": "Feature", "properties": { "OBJECTID": 3, "NEIGHBOR": "Gate D1", "FULLNAME": "Power Station", "SPACE": null, "TYPE": "Power Station", "ART_ID": null, "TERMINAL": "D", "GlobalID": "2f61f2dc-cef9-4c0b-8473-fdf0e6fa9236" }, "geometry": { "type": "Point", "coordinates": [ -75.239536670917289, 39.876580435859573 ] } },
+{ "type": "Feature", "properties": { "OBJECTID": 4, "NEIGHBOR": "Gate E9", "FULLNAME": "Power Station", "SPACE": null, "TYPE": "Power Station", "ART_ID": null, "TERMINAL": "E", "GlobalID": "9f88fbca-82ef-45ec-9d0a-a706c3d4dd6e" }, "geometry": { "type": "Point", "coordinates": [ -75.237031600726041, 39.878011428969856 ] } },
+{ "type": "Feature", "properties": { "OBJECTID": 5, "NEIGHBOR": "Gate E10", "FULLNAME": "Power Station", "SPACE": null, "TYPE": "Power Station", "ART_ID": null, "TERMINAL": "E", "GlobalID": "ade41c60-2a26-49e3-9dd0-07f4ade817c2" }, "geometry": { "type": "Point", "coordinates": [ -75.237038441370601, 39.877798629608151 ] } },
+{ "type": "Feature", "properties": { "OBJECTID": 6, "NEIGHBOR": "Gate F5", "FULLNAME": "Power Station", "SPACE": null, "TYPE": "Power Station", "ART_ID": null, "TERMINAL": "F", "GlobalID": "5968e88c-fee4-4982-ada5-6b4074ac7da1" }, "geometry": { "type": "Point", "coordinates": [ -75.238512930725662, 39.880682429989079 ] } }
+]
+}

@@ -1,0 +1,14 @@
+{
+"type": "FeatureCollection",
+"crs": { "type": "name", "properties": { "name": "urn:ogc:def:crs:OGC:1.3:CRS84" } },
+                                                                                
+"features": [
+{ "type": "Feature", "properties": { "OBJECTID": 76, "NEIGHBOR": null, "FULLNAME": "Pet Port A (Departures)", "SPACE": null, "TYPE": "Pet Port", "ART_ID": null, "TERMINAL": "AE", "GlobalID": "3b67ac78-6444-41be-a100-9c88cd4eb2b1" }, "geometry": { "type": "Point", "coordinates": [ -75.24753226862606, 39.875434061240043 ] } },
+{ "type": "Feature", "properties": { "OBJECTID": 77, "NEIGHBOR": null, "FULLNAME": "Pet Port A (Arrivals)", "SPACE": null, "TYPE": "Pet Port", "ART_ID": null, "TERMINAL": "AE", "GlobalID": "e669238c-cb99-4515-812c-0d724d71f3cb" }, "geometry": { "type": "Point", "coordinates": [ -75.246589799502914, 39.876750832616558 ] } },
+{ "type": "Feature", "properties": { "OBJECTID": 78, "NEIGHBOR": null, "FULLNAME": "Pet Port B\/C (Arrivals)", "SPACE": null, "TYPE": "Pet Port", "ART_ID": null, "TERMINAL": "B", "GlobalID": "ae274f62-9172-4289-861c-9f6bcbcc49eb" }, "geometry": { "type": "Point", "coordinates": [ -75.244282303309518, 39.876638853710652 ] } },
+{ "type": "Feature", "properties": { "OBJECTID": 79, "NEIGHBOR": null, "FULLNAME": "Pet Port B\/C (Departures)", "SPACE": null, "TYPE": "Pet Port", "ART_ID": null, "TERMINAL": "C", "GlobalID": "d911d737-f484-4053-94ba-7d4ddbf74850" }, "geometry": { "type": "Point", "coordinates": [ -75.241928335730861, 39.876582329501794 ] } },
+{ "type": "Feature", "properties": { "OBJECTID": 80, "NEIGHBOR": null, "FULLNAME": "Pet Port D\/E (Arrivals)", "SPACE": null, "TYPE": "Pet Port", "ART_ID": null, "TERMINAL": "E", "GlobalID": "672f4df1-98e5-45ee-a2bf-b7ba97ad654c" }, "geometry": { "type": "Point", "coordinates": [ -75.240699026209768, 39.878790372523042 ] } },
+{ "type": "Feature", "properties": { "OBJECTID": 81, "NEIGHBOR": null, "FULLNAME": "Pet Port D\/E (Departures)", "SPACE": null, "TYPE": "Pet Port", "ART_ID": null, "TERMINAL": "F", "GlobalID": "aa057a9e-8114-4eb7-9bff-772164c29529" }, "geometry": { "type": "Point", "coordinates": [ -75.239419552238928, 39.879286088093863 ] } },
+{ "type": "Feature", "properties": { "OBJECTID": 82, "NEIGHBOR": null, "FULLNAME": "Pet Port F", "SPACE": null, "TYPE": "Pet Port", "ART_ID": null, "TERMINAL": "F", "GlobalID": "0f381f37-4a15-4aa3-a49c-5340bb848785" }, "geometry": { "type": "Point", "coordinates": [ -75.240059022029612, 39.88093013776961 ] } }
+]
+}
