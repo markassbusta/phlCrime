@@ -1,7 +1,7 @@
 
 
 // Center on Airport
-var map = new L.map('basic-map', {zoomControl:false}).setView([39.952299, -75.163256], 11);
+var map = new L.map('basic-map', {zoomControl:false}).setView([39.952299, -75.163256], 15);
 
 /**
  * Add basemap tiles 
@@ -192,6 +192,15 @@ var legend = L.control({position: 'bottomright'});
     		return div;
 		};
 		legend.addTo(map);
+
+// add bookmarks widget
+
+var control = new L.Control.Bookmarks().addTo(map);
+
+
+		//var zoomHome = L.Control.zoomHome();
+//zoomHome.addTo(map);
+
 
 
 
