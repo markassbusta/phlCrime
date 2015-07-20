@@ -1,15 +1,10 @@
-/**
- * Add polygons from geojson on the map
- *
- * In addition to points, leaflet can display
- * polygons from geojson
- */
 
-// Center on Philadelphia
-var map = new L.map('basic-map', null, {zoomControl:false}).setView([39.952299, -75.163256], 11);
+
+// Center on Airport
+var map = new L.map('basic-map', {zoomControl:false}).setView([39.952299, -75.163256], 11);
 
 /**
- * Add OpenStreetMap tiles to the map
+ * Add basemap tiles 
  */
  var CartoDB_PositronNoLabels = L.tileLayer('http://{s}.basemaps.cartocdn.com/light_nolabels/{z}/{x}/{y}.png', {
 	attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a> &copy; <a href="http://cartodb.com/attributions">CartoDB</a>',
@@ -19,13 +14,12 @@ var map = new L.map('basic-map', null, {zoomControl:false}).setView([39.952299, 
 
 
 
- map.addControl(L.control.zoom({position:'topright'}));
 
-// Neighborhoods geojson URL
+// airport terminal buildings geojson URL
 var apTerm = "/static/data/airportTerm.geojson"
 
 
-
+// add geoJSON select control function 
 $.getJSON(apTerm,function(data){
 	var geoLayer = L.geoJson(data).addTo(map);
 
@@ -42,6 +36,7 @@ $.getJSON(apTerm,function(data){
 	map.addControl(geoList);
 });
 
+// add geoserver overlays
 var overlay_DefaultPolygon = L.tileLayer.wms('http://ec2-52-27-23-96.us-west-2.compute.amazonaws.com/geoserver/airportRunways/wms?version=1.1.0&layers=airportRunways:GIS_AIRPORT.Runways&styles=&bbox=-75.2752807767853,39.8605440088057,-75.2126961472546,39.8877399676479&width=768&height=333&srs=EPSG:4326&', {
 			layers: 'GIS_AIRPORT.Runways',
 			format: 'image/png',
@@ -176,7 +171,17 @@ $.getJSON(powerURL,function(data){
 	 map.addLayer(clustersE);
 	});
 
-
+// Add Title 
+var title = new L.Control();
+		title.onAdd = function (map) {
+			this._div = L.DomUtil.create('div', 'info'); // create a div with a class "info"
+			this.update();
+			return this._div;
+		};
+		title.update = function () {
+			this._div.innerHTML = '<h2>Philadelphia International Airport</h2>'
+		};
+		title.addTo(map);
 
 
 // Add Legend
