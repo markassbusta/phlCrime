@@ -58,6 +58,31 @@ var overlay_termStyle = L.tileLayer.wms('http://ec2-52-27-23-96.us-west-2.comput
 			continuousWorld : true,
 		}).addTo(map);
 
+
+var overlay_DefaultPolygon = L.tileLayer.wms('http://ec2-52-25-236-134.us-west-2.compute.amazonaws.com/geoserver/apParking/wms?version=1.1.0&layers=apParking:fewerLots&styles=&bbox=-75.2516064926151,39.8764872354633,-75.230890030485,39.8917234949106&width=768&height=564&srs=EPSG:4326&', {
+			layers: 'fewerLots',
+			format: 'image/png',
+			transparent: true,
+			continuousWorld : true,
+		}).addTo(map);
+
+var overlay_DefaultLine = L.tileLayer.wms('http://ec2-52-25-236-134.us-west-2.compute.amazonaws.com/geoserver/moreRail/wms?version=1.1.0&layers=moreRail:betterCut&styles=&bbox=-75.2566496244127,39.8748353626317,-75.2387004186045,39.8986308782245&width=579&height=768&srs=EPSG:4326&', {
+			layers: 'betterCut',
+			format: 'image/png',
+			transparent: true,
+			continuousWorld : true,
+		}).addTo(map);
+
+var overlay_DefaultLine = L.tileLayer.wms('http://ec2-52-25-236-134.us-west-2.compute.amazonaws.com/geoserver/lessRail/wms?version=1.1.0&layers=lessRail:lessRail&styles=&bbox=-75.248345225291,39.8755839879008,-75.2398432788398,39.8794156448123&width=768&height=346&srs=EPSG:4326&', {
+			layers: 'lessRail',
+			format: 'image/png',
+			transparent: true,
+			continuousWorld : true,
+		}).addTo(map);
+
+
+
+
 // add clusters for art exhibits
 var artURL = "/static/data/airportArt.geojson"
 
@@ -188,7 +213,7 @@ var title = new L.Control();
 var legend = L.control({position: 'bottomright'});
 		legend.onAdd = function (map) {
 			var div = L.DomUtil.create('div', 'info legend');
-			div.innerHTML = "<h3>Legend:</h3><table><img src=/static/lib/images/info.png>Information</table><table><img src=/static/lib/images/money.png>ATM</table><table><img src=/static/lib/images/power.png>Power Station</table><table><img src=/static/lib/images/paw.png>Pet Port</table><table><img src=/static/lib/images/art.png>Art Exhibit</table>";
+			div.innerHTML = "<h3><u>Legend:</u></h3><table><img src=/static/lib/images/info.png>Information</table><table><img src=/static/lib/images/money.png>ATM</table><table><img src=/static/lib/images/power.png>Power Station</table><table><img src=/static/lib/images/paw.png>Pet Port</table><table><img src=/static/lib/images/art.png>Art Exhibit</table>";
     		return div;
 		};
 		legend.addTo(map);
